@@ -74,3 +74,5 @@ MemoryCaptures/
 Thumbs.db
 *.sqlite
 
+#Allow the Unity WebGL core data folder inside the React public folder
+!frontend/public/*/Build/
