@@ -75,4 +75,6 @@ Thumbs.db
 *.sqlite
 
 #Allow the Unity WebGL core data folder inside the React public folder
-!frontend/public/*/Build/
+!game-inventory-frontend/public/*/Build/
+!**/game-inventory-frontend/public/UnityBuild/JungleExplorer/Build/
+!**/game-inventory-frontend/UnityBuild/JungleExplorer/Build/**
