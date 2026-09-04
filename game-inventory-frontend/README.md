@@ -1,16 +1,19 @@
-# React + Vite
+# Game Inventory Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a full-stack RPG inventory system that connects 
+an interactive **Unity game** to a **React web dashboard** 
+through a **Spring Boot API**. When you find items in the game, 
+they instantly update in the database and show up on the game panel.
 
-Currently, two official plugins are available:
+You can add items in in the admin panel, if they exist as a hidden item 
+in the game, they will be added. To add an item or delete it, you will need 
+the admin key: mySuperSecretPassword
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+##  How It's Organized
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+*   `backend/` — The Spring Boot REST API that handles all the game logic and connects to MySQL.
+*   `frontend/` — The React dashboard for viewing and managing items.
+*   `unity-game/` — The actual game project files.
+*   `schema.sql` — The MySQL table layouts.
