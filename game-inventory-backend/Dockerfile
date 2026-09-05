@@ -5,10 +5,11 @@ COPY . .
 RUN mvn clean package -DskipTests
 
 # Stage 2: Create a lightweight runtime using Temurin JRE 26
-FROM eclipse-temurin:26-jre-alpine
+FROM eclipse-temurin:26-jdk-alpine
 WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
 EXPOSE 8080
 
 # Keep the memory flags capped to fit Render's 512MB free tier
 ENTRYPOINT ["java", "-Xmx256m", "-Xms128m", "-jar", "app.jar"]
+EOF
