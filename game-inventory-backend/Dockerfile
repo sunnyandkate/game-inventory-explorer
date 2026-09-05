@@ -5,7 +5,7 @@ COPY . .
 RUN mvn clean package -DskipTests
 
 # Stage 2: Create a lightweight runtime using Temurin JRE 26
-FROM eclipse-temurin:26-jre
+FROM eclipse-temurin:26-jre-alpine
 WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
 EXPOSE 8080
