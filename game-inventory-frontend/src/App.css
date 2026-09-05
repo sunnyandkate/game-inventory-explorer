@@ -46,7 +46,6 @@ body{
   min-height: 100vh;
   background-color: var(--color-bg);
   border:none;
-  color: 'fff;
 }
 .main-content{
   padding: 30px;
