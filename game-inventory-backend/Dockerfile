@@ -12,4 +12,4 @@ EXPOSE 8080
 
 # Keep the memory flags capped to fit Render's 512MB free tier
 ENTRYPOINT ["java", "-Xmx256m", "-Xms128m", "-jar", "app.jar"]
-EOF
+
