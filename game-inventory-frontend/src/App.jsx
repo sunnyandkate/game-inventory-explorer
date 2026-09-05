@@ -7,7 +7,8 @@ import GamePanel from './pages/GamePanel';
 
 function App(){
 
-  const API_BASE = "http://localhost:8080/api/items";
+  //const API_BASE = "http://localhost:8080/api/items";
+  const API_BASE = "https://game-inventory-backend-ot59.onrender.com/api/items";
 
   return (
     <BrowserRouter>
