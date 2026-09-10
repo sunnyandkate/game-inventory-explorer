@@ -17,3 +17,9 @@ the admin key: mySuperSecretPassword
 *   `frontend/` — The React dashboard for viewing and managing items.
 *   `unity-game/` — The actual game project files.
 *   `schema.sql` — The MySQL table layouts.
+
+
+* ## Audio & Music Credits
+* **Background Music:** "Tribal Jungle Music Free Pack" by <a href="https://assetstore.unity.com/packages/audio/music/tribal-jungle-music-free-pack-131414" target="_blank" rel="noopener noreferrer">Tyler Cunningham</a> via the Unity Asset Store.
+
+
