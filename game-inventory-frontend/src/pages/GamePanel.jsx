@@ -36,7 +36,7 @@ useEffect(() => {
 
   return (
     <div className="game-panel">
-      <h2>Unity Exploring Game</h2>
+      <h2>Exploring Game</h2>
       <p>
         This game window is built for web browsers via Unity WebGL. 
         Discover items inside the game and watch your HTML web inventory bag below automatically synchronize over the database.
