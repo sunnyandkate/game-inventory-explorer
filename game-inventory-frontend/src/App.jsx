@@ -29,8 +29,8 @@ function App(){
             <div className="footer-container">
               <p className="copyright">&copy; 2026 sunnyandkate</p>         
               <div className="footer-right">
-                  <a href="https://sunnyandkate.github.io/legal.html">legal <span>| </span></a>
-                  <a href="https://sunnyandkate.github.io/privacypolicy.html">privacy policy</a>
+                  <a href="https://sunnyandkate.github.io/legal.html" target="_blank">legal <span>| </span></a>
+                  <a href="https://sunnyandkate.github.io/privacypolicy.html" target="_blank">privacy policy</a>
               </div>
             </div>
         </footer>              
