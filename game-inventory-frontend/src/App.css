@@ -293,7 +293,6 @@ footer a{
   padding-bottom: 60px;
 }
 .hint-floating-wrapper {
-  position: absolute;
   bottom: -2rem;
   right: 2.4rem;
   display: flex;
