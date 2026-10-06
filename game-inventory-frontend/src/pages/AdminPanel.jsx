@@ -4,6 +4,7 @@ export default function AdminPanel({ api }){
   const [allItems, setAllItems] = useState([]);
   const [name, setName] = useState("");
   const [token, setToken] = useState(""); 
+  const [showHint, setShowHint] = useState(false);
 
   useEffect(() => {
     fetch(`${api}/admin/allItems`).then(res => res.json()).then(data => setAllItems(data));
@@ -54,7 +55,7 @@ export default function AdminPanel({ api }){
     <div className="admin-panel">
       <h2>Game Inventory</h2>
       <div className="password-container">
-        <label>Admin Access Key:</label>
+        <label>Admin Access Key: </label>
         <input type="password" placeholder="Enter secret token to write/delete..." value={token} onChange={e => setToken(e.target.value)} className="input-field"/>
       </div>
       <p>Type in items to add to the inventory</p>
@@ -80,6 +81,27 @@ export default function AdminPanel({ api }){
           </li>
         ))}
         </ul>
+     <div className="hint-floating-wrapper">
+        
+        {/* Expandable Hint Box Panel Content */}
+        {showHint && (
+          <div className="testing-guide-box">
+            <p className="guide-title"><strong>Testing Environment Hints</strong></p>
+            <p className="guide-row"><strong>Key:</strong> <code className="code-badge">mySuperSecretPassword</code></p>
+            <p className="guide-row"><strong>Items:</strong> rope, idol, torch, potion</p>
+          </div>
+        )}
+
+        {/* Interactive Toggle Trigger Button Control */}
+        <button 
+          type="button"
+          onClick={() => setShowHint(!showHint)} 
+          className="hint-toggle-btn"
+        >
+          {showHint ? "Hide Hint" : "Need a Hint?"}
+        </button>
+      </div>
+      
     </div>
   );
 }
