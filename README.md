@@ -7,7 +7,8 @@ they instantly update in the database and show up on the game panel.
 
 You can add items in in the admin panel, if they exist as a hidden item 
 in the game, they will be added. To add an item or delete it, you will need 
-the admin key: mySuperSecretPassword
+the admin key: mySuperSecretPassword 
+<br />
 Items to find: potion, torch, rope, idol
 
 ---
