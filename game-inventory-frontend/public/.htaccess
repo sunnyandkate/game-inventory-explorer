@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteBase /game-inventory-explorer/
+RewriteRule ^index\.html$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /game-inventory-explorer/index.html [L]

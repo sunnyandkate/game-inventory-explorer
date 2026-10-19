@@ -11,7 +11,7 @@ function App(){
   const API_BASE = "https://game-inventory-backend-ot59.onrender.com/api/items";
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/game-inventory-explorer/">
        <div className="container">
 
         <nav className="navigation">

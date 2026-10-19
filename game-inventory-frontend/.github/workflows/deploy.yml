@@ -1,0 +1,35 @@
+name: Production Deployment to Eco Web Hosting
+
+on:
+  push:
+    branches:
+      - main 
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository Code Core
+        uses: actions/checkout@v4
+
+      - name: Set Up Node.js Environment Runtime
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Project Dependencies
+        run: npm ci
+
+      - name: Compile Production Build Package (Includes Unity Framework Chunks)
+        run: npm run build
+
+      - name: Automated FTP Upload Pipeline to Eco Web Hosting Subfolder
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }} 
+          username: ${{ secrets.FTP_USERNAME }} 
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./dist/ 
+          server-dir: /public_html/projects/game-inventory-explorer/

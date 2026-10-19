@@ -3,10 +3,10 @@ import { Unity, useUnityContext } from "react-unity-webgl";
 
 function UnityActiveCanvas({ api, bag, setBag, fetchBag }){
   const { unityProvider, isLoaded } = useUnityContext({
-  loaderUrl: "/UnityBuild/JungleExplorer/Build/JungleExplorer.loader.js",
-  dataUrl: "/UnityBuild/JungleExplorer/Build/JungleExplorer.data",
-  frameworkUrl: "/UnityBuild/JungleExplorer/Build/JungleExplorer.framework.js",
-  codeUrl: "/UnityBuild/JungleExplorer/Build/JungleExplorer.wasm",
+  loaderUrl: "UnityBuild/JungleExplorer/Build/JungleExplorer.loader.js",
+  dataUrl: "UnityBuild/JungleExplorer/Build/JungleExplorer.data",
+  frameworkUrl: "UnityBuild/JungleExplorer/Build/JungleExplorer.framework.js",
+  codeUrl: "UnityBuild/JungleExplorer/Build/JungleExplorer.wasm",
 });
 
   useEffect(() => {
