@@ -17,13 +17,19 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
+            cache: 'npm'
+          # 🚀 MONOREPO FIX: Tracks your package lock file deep inside your frontend folder depth
+          cache-dependency-path: './game explorer frontend/package-lock.json'
 
       - name: Install Project Dependencies
+        # 🚀 MONOREPO FIX: Forces the node modules to install directly inside the frontend folder context
         run: npm ci
+        working-directory: './game explorer frontend'
 
       - name: Compile Production Build Package (Includes Unity Framework Chunks)
+        # 🚀 MONOREPO FIX: Runs your Vite build commands relative to your frontend root
         run: npm run build
+        working-directory: './game explorer frontend'
 
       - name: Automated FTP Upload Pipeline to Eco Web Hosting Subfolder
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
