@@ -39,3 +39,6 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: './game-inventory-frontend/dist/' 
           server-dir: /public_html/projects/game-inventory-explorer/
+
+          retry: 10
+          timeout: 60000
