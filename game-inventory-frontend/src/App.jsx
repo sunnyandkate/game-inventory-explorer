@@ -1,6 +1,6 @@
 import './App.css';
 import './cookieconsent.css';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link, Navigate } from 'react-router-dom';
 
 import AdminPanel from './pages/AdminPanel';
 import GamePanel from './pages/GamePanel';
