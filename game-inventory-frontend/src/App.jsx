@@ -23,6 +23,8 @@ function App(){
             <Route path="/admin" element={<AdminPanel api={API_BASE} />} />
             <Route path="/game" element={<GamePanel api={API_BASE} />} />
 
+             <Route path="/" element={<Navigate to="/admin" replace />} />
+              <Route path="/index.html" element={<Navigate to="/admin" replace />} />
           </Routes>  
         </div>  
         <footer>

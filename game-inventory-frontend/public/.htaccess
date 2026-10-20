@@ -4,3 +4,13 @@ RewriteRule ^index\.html$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /game-inventory-explorer/index.html [L]
+
+<IfModule mime_module>
+  AddType application/wasm .wasm
+  AddType application/x-javascript .js
+  AddType application/octet-stream .data .symbols.json
+</IfModule>
+
+<IfModule mod_deflate.c>
+  RemoveOutputFilter DEFLATE
+</IfModule>
